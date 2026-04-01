@@ -3,13 +3,41 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Simple Music Player</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1><b></b>Simple Music Player</b></h1>
+        <h1><b>Simple Music Player</b></h1>
+        <hr>
+        <label for="file">Upload music here:</label>
+        <input type="file" id="music" accept="audio/*" multiple>
+        <ul id="playlist-names"></ul>
+
         <hr>
 
+        <div style="display: flex; flex-direction: row;">
+        <h3>Currently playing: </h3>
+        <h3 id="currentsong"> No song uploaded </h3>
+        </div>
+
+        <div>
+            <input type="range" id="progress" value="0" min="0" max="100">
+        </div>
+        <div class="player-btn">
+            <button id="previous">⏮</button>
+            <button id="play">▶︎</button>
+            <button id="next">⏭</button>
+        </div>
+        <div class="player-btn">
+            <button id="loopone">Loop 1</button>
+            <button id="loopall">Loop All</button>
+            <button id="shuffle">Shuffle</button>
+        </div>
+
+        <hr>
+        <h3>made by m1rabil1z</h3>
+
+        <script src="index.js"></script>
     </body>
 </html>

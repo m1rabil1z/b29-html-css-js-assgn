@@ -3,9 +3,11 @@ h1 {
     font-family: 'Courier New', Courier, monospace;
     color: chocolate;
     font-size: 50px;
+    text-shadow: 3px 3px 5px rgb(0, 73, 43);
+    -webkit-text-stroke: 1px black;
 }
 
-h2,h3 {
+h2,h3,span {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     color:rgb(0, 73, 43) ;
@@ -17,17 +19,26 @@ li {
     color:rgb(0, 73, 43)
 }
 
+label {
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    color:rgb(0, 73, 43);
+    font-size: 20px;
+}
+
 body{
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: rgb(198, 243, 225);
+    width: 100vw;
 }
 
 hr {
-  width: 96%;               
+  width: 100%;               
   background-color: rgb(0, 73, 43);
   height: 1px;
+  box-shadow: 1px 1px 3px rgb(0, 73, 43);
 }
 
 #start {
@@ -36,7 +47,57 @@ hr {
     text-align: center;
     border-radius: 50px;
     width: 500px;
-    height: 100px;
+    height: 75px;
     font-size: 30px;
+    box-shadow: 3px 3px 3px rgb(0, 73, 43);
 }
 
+#start:hover{
+    background-color: rgb(122, 207, 173);
+    transform: scale(1.02);
+}
+
+#start:active{
+    box-shadow: 0px 0px 0px;
+    transform: translateY(3px);
+}
+
+.player-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+}
+
+.player-btn button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    background-color: rgb(66, 214, 154); 
+    color: rgb(0, 73, 43); 
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px rgb(0, 73, 43);
+    width: 200px;
+    height: 40px;
+}
+
+.player-btn button:hover {
+    background-color: rgb(122, 207, 173);
+    transform: scale(1.02);
+}
+
+.player-btn button.active {
+    box-shadow: 0px 0px 0px;
+    transform: translateY(3px);
+}
+
+.player-btn button:active {
+    box-shadow: 0px 0px 0px;
+    transform: translateY(3px);
+}
+
+#progress {
+    width: 620px;
+    accent-color: rgb(0, 73, 43);
+}
